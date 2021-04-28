@@ -5,7 +5,7 @@ DATA BINDING
           1.1 Data is passed from view to component 
                 1.1.1 Event Binding (in js we are using queryselector) : it can be click,keypress,mouseover,etc.
                                 $event is used when we need moor information associated with event
-
+                1.1.2 template Referencing
           1.2 Data is passed from component to view
                 1.2.1 String Interpolation / Interpolation  {{ }}
                 1.2.2 Property Binding : you can bind any property in component to property in view  []

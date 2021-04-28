@@ -30,10 +30,12 @@ export class LoginComponent implements OnInit {
     this.pswd=event.target.value;
     alert(this.pswd);
   }
-  login(){
+  login(a:any,p:any){
       //alert("Login Clicked");=====> now no need of this alert
-        var accno = this.accnum; //copied from bank_app.js (sajay sir) and made changes
-        var pwd = this.pswd;
+        //var accno = this.accnum; //copied from bank_app.js (sajay sir) and made changes
+        var accno=a.value;
+        //var pwd = this.pswd;
+        var pwd=p.value;
         let details=this.account_details
         if(accno in details){
           if (pwd == details[accno]["password"]) {
