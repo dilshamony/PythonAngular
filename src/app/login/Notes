@@ -1,0 +1,13 @@
+DATA BINDING
+    It is a feature provided by angular to sync view and component of our application.
+    it is of 2 types
+    1. One way Binding
+          1.1 Data is passed from view to component 
+                1.1.1 Event Binding (in js we are using queryselector) : it can be click,keypress,mouseover,etc.
+                                $event is used when we need moor information associated with event
+
+          1.2 Data is passed from component to view
+                1.2.1 String Interpolation / Interpolation  {{ }}
+                1.2.2 Property Binding : you can bind any property in component to property in view  []
+
+    2. Two way Binding
