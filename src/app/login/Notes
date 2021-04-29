@@ -11,3 +11,6 @@ DATA BINDING
                 1.2.2 Property Binding : you can bind any property in component to property in view  []
 
     2. Two way Binding
+            The data can pass from view to component and component to view at the same time.
+            2.1 ngModel (it comes under a 3rd party module called FormsModule)
+            
