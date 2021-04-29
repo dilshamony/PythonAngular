@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   aim="Your Perfect Banking Partner"
   accountNumber= "Account Number Please"
-  accnum="";
+  accnum="Account Number Please";
   pswd="";
    account_details :any= {
     1000: { name: "ajay", accno: 1000, password: "testone", amount: 5000 },
@@ -30,12 +30,12 @@ export class LoginComponent implements OnInit {
     this.pswd=event.target.value;
     alert(this.pswd);
   }
-  login(a:any,p:any){
+  login(){
       //alert("Login Clicked");=====> now no need of this alert
         //var accno = this.accnum; //copied from bank_app.js (sajay sir) and made changes
-        var accno=a.value;
+        var accno=this.accnum;
         //var pwd = this.pswd;
-        var pwd=p.value;
+        var pwd=this.pswd;
         let details=this.account_details
         if(accno in details){
           if (pwd == details[accno]["password"]) {
