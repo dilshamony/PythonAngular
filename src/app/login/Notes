@@ -1,15 +1,21 @@
 Angular
+=======
+      It is a front end development technology
 
-component
+Features
+-------
+Component:
+      app component is the root componentof this project
 
-Modules
+Modules:
+      app module is the root module of this project
 
-Dependency injection / Inversion of control (to tranfer control of an object to its related object)
 
 DATA BINDING
-    It is a feature provided by angular to sync view and component of our application.
-    it is of 2 types
-    1. One way Binding
+------------
+    * It is a feature provided by angular to sync view and component of our application.
+    * it is of 2 types
+    1. One way Binding:
           1.1 Data is passed from view to component 
                 1.1.1 Event Binding (in js we are using queryselector) : it can be click,keypress,mouseover,etc.
                                 $event is used when we need moor information associated with event
@@ -19,6 +25,16 @@ DATA BINDING
                 1.2.1 String Interpolation / Interpolation  {{ }}
                 1.2.2 Property Binding : you can bind any property in component to property in view  []
 
-    2. Two way Binding
+    2. Two way Binding:
             The data can pass from view to component and component to view at the same time.
             2.1 ngModel (it comes under a 3rd party module called FormsModule)
+
+Dependency injection / Inversion of control 
+--------------------   --------------------
+      To tranfer control of an object to its related object
+      Routing is an example
+
+
+SERVICES
+--------
+      Services are used for sharing datas between 2 different components

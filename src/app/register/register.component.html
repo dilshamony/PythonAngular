@@ -1,0 +1,20 @@
+<form (ngSubmit)="register()">
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            
+            <div class="main">
+                <h4>WELCOME TO YES BANK!!!  <br><h5>{{aim}}</h5></h4><br>
+
+            <input id="uname" type="text" name="uname" class="text" [(ngModel)]="uname" placeholder="User Name" ><br><br>
+            <input id="accno" type="text" name="accnum" class="text" [(ngModel)]="accnum" placeholder="Account number" ><br><br>
+            <input id="pswd" type="password" name="pswd" class="text" [(ngModel)]="pswd" placeholder="Password" ><br> <br>
+           <input type="submit" value="Register"  class="button button1 butefct"> <br><br>
+           <a class="textfp" routerLink="">Log In</a>
+        </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+</form>

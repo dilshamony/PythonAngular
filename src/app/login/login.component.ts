@@ -1,5 +1,7 @@
+import { ArrayType } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -11,15 +13,9 @@ export class LoginComponent implements OnInit {
   accountNumber= "Account Number Please"
   accnum="Account Number Please";
   pswd="";
-   account_details :any= {
-    1000: { name: "ajay", accno: 1000, password: "testone", amount: 5000 },
-    1001: { name: "vijay", accno: 1001, password: "testtwo", amount: 3000 },
-    1002: { name: "ram", accno: 1002, password: "testthree", amount: 7000 },
-    1003: { name: "ravi", accno: 1003, password: "testfour", amount: 10000 },
+   
 
-}
-
-  constructor(private router:Router) { } //method which run 1st is constructor. this step bracket is for routing
+  constructor(private router:Router,private ds:DataService) { } //method which run 1st is constructor. this step bracket is for routing
 
   ngOnInit(): void {
   }
@@ -37,7 +33,7 @@ export class LoginComponent implements OnInit {
         var accno=this.accnum;
         //var pwd = this.pswd;
         var pwd=this.pswd;
-        let details=this.account_details
+        let details=this.ds.account_details
         if(accno in details){
           if (pwd == details[accno]["password"]) {
             alert("Login Success");
@@ -50,6 +46,10 @@ export class LoginComponent implements OnInit {
     else {
       alert("Invalid Account Number");
     }
+  }
+  register(){
+    //alert("Registration Clicked")
+    this.router.navigateByUrl("register")
   }
 }
 //https://github.com/arunthankachan07/bankApp.git
