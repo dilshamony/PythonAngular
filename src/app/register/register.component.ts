@@ -18,21 +18,17 @@ constructor(private ds:DataService,private router:Router) { }
   ngOnInit(): void {
   }
 register(){
-  alert("Registration Successful");
+  //alert("Registration Successful");
   var accno=this.accnum;
   var password=this.pswd;
   var name=this.uname;
-  let details=this.ds.account_details;
-  console.log(details);
-        if(accno in details){
-          alert("User already exists. Please Login!!!")
-        }
-        else {
-          details[accno]={
-            name,accno,password,amount:0
-          }
-          alert("Registration Successful");
-          this.router.navigateByUrl("");
-        }
+  var result=this.ds.register(name,accno,password)
+  if(result){
+    alert("Registration Successful");
+    this.router.navigateByUrl("");
+  }
+  else{
+    alert("User already exists. Please Login!!!")
+  }
     }
 }

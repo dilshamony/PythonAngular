@@ -29,23 +29,14 @@ export class LoginComponent implements OnInit {
   }
   login(){
       //alert("Login Clicked");=====> now no need of this alert
-        //var accno = this.accnum; //copied from bank_app.js (sajay sir) and made changes
         var accno=this.accnum;
-        //var pwd = this.pswd;
         var pwd=this.pswd;
-        let details=this.ds.account_details
-        if(accno in details){
-          if (pwd == details[accno]["password"]) {
-            alert("Login Success");
-            this.router.navigateByUrl("dashboard")//done for routing
+        const result=this.ds.login(accno,pwd)
+        if (result){
+          alert("Login Success");
+          this.router.navigateByUrl("dashboard")//done for routing
         }
-        else {
-          alert("Incorrect Password");
-        }
-    }
-    else {
-      alert("Invalid Account Number");
-    }
+        
   }
   register(){
     //alert("Registration Clicked")

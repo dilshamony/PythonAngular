@@ -10,6 +10,34 @@ export class DataService {
     1002: { name: "ram", accno: 1002, password: "testthree", amount: 7000 },
     1003: { name: "ravi", accno: 1003, password: "testfour", amount: 10000 },
 
+} 
+ constructor() { }
+ register(name:any,accno:any,password:any){
+  let details=this.account_details
+  if(accno in details){
+    return false;
+  }
+  else {
+    details[accno]={
+      name,accno,password,amount:0
+    }
+    return true;
+  }
 }
-  constructor() { }
+ login(accno:any,pwd:any){
+  let details=this.account_details
+  if(accno in details){
+    if (pwd == details[accno]["password"]) {
+      return true;
+  }
+  else {
+    alert("Incorrect Password");
+    return false;
+  }
+}
+else {
+alert("Invalid Account Number");
+return false
+}
+ }
 }

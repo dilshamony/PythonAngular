@@ -1,4 +1,4 @@
-Angular
+Angular    Normal Web page Creation
 =======
       It is a front end development technology
 
@@ -38,3 +38,11 @@ Dependency injection / Inversion of control
 SERVICES
 --------
       Services are used for sharing datas between 2 different components
+
+
+MODAL DRIVEN WEBPAGE Creation
+=============================
+      * includes validation
+      *Reactive forms are used for this validation purpose
+Reactive Forms
+      

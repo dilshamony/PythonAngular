@@ -1,3 +1,4 @@
+<form (ngSubmit)="login()">
 <div class="container">
     <div class="row">
         <div class="col-4"></div>
@@ -6,11 +7,11 @@
             <div class="main">
                 <h4>WELCOME TO YES BANK!!!  <br><h5>{{aim}}</h5></h4><br>
 
-            <input id="accno" type="text" class="text" [(ngModel)]="accnum" placeholder="Account number" ><br><br>
+            <input id="accno" type="text" class="text" name="accnum" [(ngModel)]="accnum" placeholder="Account number" ><br><br>
             
-            <input id="pswd" type="password" class="text" [(ngModel)]="pswd" placeholder="Password" ><br> <br>
+            <input id="pswd" type="password" class="text" name="pswd" [(ngModel)]="pswd" placeholder="Password" ><br> <br>
             
-            <input type="submit" value="Log In" class="button butefct" (click)="login()"> <br>
+            <input type="submit" value="Log In" class="button butefct" > <br>
 
                 <a class="textfp" href="#">Forgotten password?</a>
            <div class="line"></div>
@@ -20,3 +21,4 @@
         <div class="col-4"></div>
     </div>
 </div>
+</form>
